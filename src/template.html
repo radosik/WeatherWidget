@@ -1,0 +1,27 @@
+<container class="container">
+        <div id="div" class="wrapper flex">
+  
+          <div class="block-left">
+  
+            <div class="block">
+              <h2>{{ wthr.name }}</h2>
+              <p>{{ wthr.date }}</p>
+            </div>
+  
+            <div class="block">
+              <img src="./Ceiling_fan-512.png" class="fan"style="animation: spin {{10 - wthr.wind.speed}}s infinite linear">
+              <h3 class="wind">Wind {{ wthr.wind.speed }}m/s</h3>
+            </div>
+  
+          </div>
+  
+          <div class="block">
+  
+            <img ng-src="{{ wthr.image }}">
+            <h1>{{ wthr.main.temp -273.15 }}&deg;</h1>
+            <h2 ng-repeat="wthrW in wthr.weather">{{ wthrW.description | capitalize }}</h2>
+  
+          </div>
+  
+        </div>
+      </container>

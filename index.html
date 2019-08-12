@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="WeatherApp">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <title>AngWeather</title>
+</head>
+
+<body ng-controller="weatherController">
+
+    <script>
+        const citiesList = ['Alicante','Kharkiv','Donetsk'];
+    </script>
+
+    <div class="widget" ng-repeat="city in cities">
+      <app-info info="city"></app-info>
+    </div>
+
+
+  <script src='./weatherC.js'></script>
+  <script src="./directives/directive.js"></script>
+  <script src="./controllers/component.js"></script>
+  <script src="./filters/filters.js"></script>
+</body>
+
+</html>
